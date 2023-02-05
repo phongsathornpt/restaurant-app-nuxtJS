@@ -76,7 +76,7 @@ export default {
                 longitude: this.longitude,
             }
             const { data, responseCode } = await this.$axios.$post(
-                '/api/searchbyname',
+                '/api/gmap/searchbyname',
                 payload
             )
             if (responseCode == 200) {
@@ -96,7 +96,7 @@ export default {
             this.loading = true
             this.show = true
             const { data, responseCode } = await this.$axios.$post(
-                '/api/searchbyname',
+                '/api/gmap/searchbyname',
                 payload
             )
             if (responseCode == 200) {
